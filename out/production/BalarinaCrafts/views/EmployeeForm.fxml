@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeContext" prefHeight="812.0" prefWidth="1198.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <AnchorPane layoutX="97.0" layoutY="26.0" prefHeight="330.0" prefWidth="1004.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <JFXTextField fx:id="txtEmployeeId" focusColor="#e73e68" labelFloat="true" layoutX="38.0" layoutY="31.0" onAction="#txtSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="276.0" promptText="Employee Id" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="38.0" layoutY="273.0" onAction="#saveOnAction" prefHeight="37.0" prefWidth="276.0" style="-fx-background-color: #e73e68;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="365.0" layoutY="273.0" onAction="#updateOnAction" prefHeight="37.0" prefWidth="276.0" style="-fx-background-color: #16a085;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="690.0" layoutY="273.0" onAction="#deleteOnAction" prefHeight="37.0" prefWidth="276.0" style="-fx-background-color: #e73e68;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtName" focusColor="#e73e68" labelFloat="true" layoutX="364.0" layoutY="31.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="276.0" promptText="Name" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNic" focusColor="#e73e68" labelFloat="true" layoutX="690.0" layoutY="31.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="276.0" promptText="NIC" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" focusColor="#e73e68" labelFloat="true" layoutX="38.0" layoutY="105.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="601.0" promptText="Address" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEmail" focusColor="#e73e68" labelFloat="true" layoutX="690.0" layoutY="105.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="276.0" promptText="Email" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTelNo" focusColor="#e73e68" labelFloat="true" layoutX="38.0" layoutY="181.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="276.0" promptText="Tel No." unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtRoleType" focusColor="#e73e68" labelFloat="true" layoutX="365.0" layoutY="181.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="276.0" promptText="Role Type" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtSalary" focusColor="#e73e68" labelFloat="true" layoutX="690.0" layoutY="181.0" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="276.0" promptText="Salary" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="17.0" layoutY="380.0" prefHeight="369.0" prefWidth="1165.0" style="-fx-background-color: #fbf1f3; -fx-border-radius: 10; -fx-background-radius: 10;">
+         <children>
+            <TableView fx:id="tblEmployee" layoutX="11.0" layoutY="16.0" prefHeight="339.0" prefWidth="1143.0" style="-fx-background-color: #fbf1f3; -fx-border-color: #e73e68; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <columns>
+                  <TableColumn fx:id="colEmployeeId" prefWidth="94.0" text="Employee Id" />
+                  <TableColumn fx:id="colName" prefWidth="232.0" text="Name" />
+                  <TableColumn fx:id="colNic" prefWidth="126.0" text="NIC" />
+                  <TableColumn fx:id="colAddress" prefWidth="225.0" text="Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="216.0" text="Email" />
+                  <TableColumn fx:id="colTelNo" prefWidth="101.0" text="Tel No." />
+                  <TableColumn fx:id="colRoleType" prefWidth="153.0" text="Role Type" />
+               </columns>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1143.0" layoutY="767.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagers/icons8-next-page-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="930.0" layoutY="765.0" onAction="#viewSalaryDetailsOnAction" prefHeight="33.0" prefWidth="245.0" text="View Salary Details" textAlignment="RIGHT" textFill="#e73e68">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

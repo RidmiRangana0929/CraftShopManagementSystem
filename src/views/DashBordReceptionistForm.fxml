@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashBordReceptionistContext" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBordReceptionistFormController">
+   <children>
+      <AnchorPane fx:id="buttonPanelContext" prefHeight="859.0" prefWidth="117.0" style="-fx-background-color: #fbe2e8;">
+         <children>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="45.0" layoutY="57.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/search.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="43.0" onAction="#itemsOnAction" prefHeight="86.0" prefWidth="115.0" text="Items" textFill="#fc4572">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="44.0" layoutY="142.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/icons8-add-user-group-woman-man-64.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BOTTOM_CENTER" layoutX="-1.0" layoutY="132.0" onAction="#customersOnAction" prefHeight="86.0" prefWidth="115.0" text="Customers" textFill="#fc4572">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="45.0" layoutY="229.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/order.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BOTTOM_CENTER" layoutY="219.0" onAction="#ordersOnAction" prefHeight="86.0" prefWidth="115.0" text="Orders" textFill="#fc4572">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="44.0" layoutY="782.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/icons8-logout-64.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BOTTOM_CENTER" layoutX="-1.0" layoutY="764.0" onAction="#logoutOnAction" prefHeight="86.0" prefWidth="115.0" text="Logout" textFill="#fc4572">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Line endX="15.0" layoutX="101.0" layoutY="129.0" startX="-100.0" stroke="#fc4572" />
+            <Line endX="15.0" layoutX="101.0" layoutY="218.0" startX="-100.0" stroke="#fc4572" />
+            <Line endX="15.0" layoutX="100.0" layoutY="305.0" startX="-100.0" stroke="#fc4572" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="46.0" layoutY="316.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/icons8-package-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="62.0" layoutY="331.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/icons8-check-circle-64.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BOTTOM_LEFT" layoutX="1.0" layoutY="306.0" onAction="#allOrdersOnAction" prefHeight="86.0" prefWidth="115.0" text="All Orders" textFill="#fc4572">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Line endX="15.0" layoutX="101.0" layoutY="392.0" startX="-100.0" stroke="#fc4572" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="46.0" layoutY="402.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/icons8-cash-in-hand-64.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="392.0" onAction="#paymentsOnAction" prefHeight="86.0" prefWidth="115.0" text="Payments" textFill="#fc4572">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Line endX="15.0" layoutX="101.0" layoutY="478.0" startX="-100.0" stroke="#fc4572" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-2.0" layoutY="-9.0" prefHeight="49.0" prefWidth="1310.0" style="-fx-background-color: #fbe2e8;">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" color="#fc4572" />
+         </effect>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="40.0" layoutX="1.0" layoutY="9.0" stroke="#fbe2e8" strokeType="INSIDE" width="1308.0">
+               <fill>
+                  <LinearGradient endX="0.8058252427184467" endY="0.6116504854368933" startX="0.08252427184466016" startY="0.6116504854368932">
+                     <stops>
+                        <Stop color="#fcd2dc" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="9.0" layoutY="12.0" text="Receptionist" textFill="#fc4572">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1109.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/icons8-embroidery-50.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1149.0" layoutY="17.0" text="Balarina" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="1237.0" layoutY="17.0" text="Crafts" textFill="#747d8c">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dashBordPanelRecContext" layoutX="117.0" layoutY="45.0" prefHeight="812.0" prefWidth="1189.0">
+         <children>
+            <ImageView fitHeight="812.0" fitWidth="1189.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagers/pic11.jpeg" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="460.0" layoutY="439.0" prefHeight="49.0" prefWidth="316.0" textFill="#fc4572">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="43.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="463.0" layoutY="335.0" prefHeight="104.0" prefWidth="309.0" text="00:00" textFill="#fc4572">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="86.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

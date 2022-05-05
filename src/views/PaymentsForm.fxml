@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paymentContext" prefHeight="812.0" prefWidth="1189.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentsFormController">
+   <children>
+      <AnchorPane layoutX="128.0" layoutY="157.0" prefHeight="499.0" prefWidth="934.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <JFXTextField fx:id="txtDate" alignment="CENTER" focusColor="#e73e68" labelFloat="true" layoutX="641.0" layoutY="72.0" prefHeight="37.0" prefWidth="215.0" promptText="Date" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTotal" alignment="CENTER" focusColor="#e73e68" labelFloat="true" layoutX="359.0" layoutY="168.0" prefHeight="37.0" prefWidth="215.0" promptText="Total" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCustomerId" alignment="CENTER" focusColor="#e73e68" labelFloat="true" layoutX="359.0" layoutY="72.0" prefHeight="37.0" prefWidth="215.0" promptText="Customer Id" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnPayAndPurchase" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="251.0" layoutY="379.0" onAction="#payAndPurchaseOnAction" prefHeight="49.0" prefWidth="433.0" style="-fx-background-color: #e73e68;" text="Pay And Purchase" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtOrderId" alignment="CENTER" focusColor="#e73e68" labelFloat="true" layoutX="78.0" layoutY="72.0" onAction="#txtOrderIdSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="215.0" promptText="Order Id" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCash" alignment="CENTER" focusColor="#e73e68" labelFloat="true" layoutX="208.0" layoutY="277.0" onAction="#txtCashCalculateBalanceOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="215.0" promptText="Cash" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtBalance" alignment="CENTER" focusColor="#e73e68" labelFloat="true" layoutX="513.0" layoutY="277.0" prefHeight="37.0" prefWidth="215.0" promptText="Balance" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

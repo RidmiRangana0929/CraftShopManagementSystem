@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="oderRecContext" prefHeight="812.0" prefWidth="1189.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
+   <children>
+      <AnchorPane layoutX="27.0" layoutY="23.0" prefHeight="272.0" prefWidth="1137.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <JFXTextField fx:id="txtDate" focusColor="#e73e68" labelFloat="true" layoutX="851.0" layoutY="26.0" prefHeight="37.0" prefWidth="215.0" promptText="Date" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUnit" focusColor="#e73e68" labelFloat="true" layoutX="851.0" layoutY="107.0" onAction="#txtCalculateTpOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="37.0" prefWidth="215.0" promptText="Unit" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUnitPrice" focusColor="#e73e68" labelFloat="true" layoutX="594.0" layoutY="107.0" prefHeight="37.0" prefWidth="215.0" promptText="Unite Price" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTotalPrice" alignment="CENTER" focusColor="#e73e68" labelFloat="true" layoutX="461.0" layoutY="172.0" prefHeight="37.0" prefWidth="215.0" promptText="Total price" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbCustomerId" focusColor="#e73e68" labelFloat="true" layoutX="335.0" layoutY="26.0" onAction="#cmbCustomerSearchOnAction" prefHeight="37.0" prefWidth="215.0" promptText="Customer Id" unFocusColor="#e73e68">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXComboBox fx:id="cmbItemId" focusColor="#e73e68" labelFloat="true" layoutX="70.0" layoutY="107.0" onAction="#cmbItemSearchOnAction" prefHeight="37.0" prefWidth="215.0" promptText="Item Id" unFocusColor="#e73e68">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtCustomerName" focusColor="#e73e68" labelFloat="true" layoutX="594.0" layoutY="34.0" prefHeight="37.0" prefWidth="215.0" promptText="Customer Name" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtItemName" focusColor="#e73e68" labelFloat="true" layoutX="335.0" layoutY="107.0" prefHeight="37.0" prefWidth="215.0" promptText="Item Name" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+            <Separator layoutX="13.0" layoutY="86.0" prefHeight="0.0" prefWidth="1112.0" />
+            <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="186.0" layoutY="221.0" onAction="#addToCartOnAction" prefHeight="31.0" prefWidth="354.0" style="-fx-background-color: #e73e68;" text="Add To Cart" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="598.0" layoutY="221.0" onAction="#refreshOnAction" prefHeight="31.0" prefWidth="354.0" style="-fx-background-color: #e73e68;" text="Refresh" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtOrderId" focusColor="#e73e68" labelFloat="true" layoutX="70.0" layoutY="26.0" prefHeight="37.0" prefWidth="215.0" promptText="Order Id" unFocusColor="#e73e68">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="27.0" layoutY="308.0" prefHeight="476.0" prefWidth="1137.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+         <children>
+            <TableView fx:id="tblOrderDetail" layoutX="28.0" layoutY="14.0" prefHeight="314.0" prefWidth="1082.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #fbf1f3; -fx-border-color: #e73e68;">
+               <columns>
+                  <TableColumn fx:id="colItemId" prefWidth="147.0" text="Item Id" />
+                  <TableColumn fx:id="colItemName" prefWidth="301.0" text="Item Name" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="198.0" text="Unit price" />
+                  <TableColumn fx:id="colUnit" prefWidth="127.0" text="Unit" />
+                  <TableColumn fx:id="colTotal" prefWidth="187.0" text="Total" />
+                  <TableColumn fx:id="colOption" prefWidth="120.0" text="Option" />
+               </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" layoutX="756.0" layoutY="354.0" onAction="#placeOrderOnAction" prefHeight="31.0" prefWidth="354.0" style="-fx-background-color: #e73e68;" text="Place Order" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtTotal" alignment="CENTER" layoutX="28.0" layoutY="384.0" prefHeight="39.0" prefWidth="254.0" promptText="Total" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #e73e68; -fx-background-color: white; -fx-border-width: 2;">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton buttonType="RAISED" layoutX="756.0" layoutY="416.0" onAction="#invoiceOnAction" prefHeight="31.0" prefWidth="354.0" style="-fx-background-color: #e73e68;" text="Invoice" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

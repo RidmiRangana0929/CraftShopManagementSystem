@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="allSuppliersContext" prefHeight="812.0" prefWidth="1194.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AllSuppliersFormController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="19.0" prefHeight="739.0" prefWidth="1160.0" style="-fx-background-color: #fbf1f3; -fx-border-radius: 10; -fx-background-radius: 10;">
+         <children>
+            <TableView fx:id="tblSupplierMan" layoutX="32.0" layoutY="35.0" prefHeight="669.0" prefWidth="1096.0" style="-fx-background-color: #fbf1f3; -fx-border-color: #e73e68; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <columns>
+                  <TableColumn fx:id="colSupplierId" prefWidth="85.0" text="Supplier Id" />
+                  <TableColumn fx:id="colSupplierName" prefWidth="321.0" text="Supplier Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="222.0" text="Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="280.0" text="Email" />
+                  <TableColumn fx:id="colTelNo" prefWidth="183.0" text="Tel No." />
+               </columns>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="776.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagers/back.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="775.0" onAction="#backOnAction" prefHeight="33.0" prefWidth="138.0" text="Back" textAlignment="RIGHT" textFill="#e73e68">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

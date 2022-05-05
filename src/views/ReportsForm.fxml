@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reportsContext" prefHeight="812.0" prefWidth="1189.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <AnchorPane layoutX="111.0" layoutY="406.0" prefHeight="356.0" prefWidth="967.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+         <children>
+            <Label layoutX="47.0" layoutY="65.0" prefHeight="63.0" prefWidth="538.0" text="Total Income From Orders" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="155.0" prefHeight="63.0" prefWidth="538.0" text="Total Expenditure For Materials" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIncome" layoutX="659.0" layoutY="65.0" prefHeight="63.0" prefWidth="299.0" text="0.00" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblExpenditure" layoutX="659.0" layoutY="155.0" prefHeight="63.0" prefWidth="299.0" text="0.00" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="234.0" prefHeight="63.0" prefWidth="538.0" text="Total Expenditure For Employees' Salary" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSalaryEx" layoutX="659.0" layoutY="234.0" prefHeight="63.0" prefWidth="299.0" text="0.00" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="601.0" layoutY="234.0" prefHeight="63.0" prefWidth="35.0" text=":" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="601.0" layoutY="155.0" prefHeight="63.0" prefWidth="35.0" text=":" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="601.0" layoutY="65.0" prefHeight="63.0" prefWidth="35.0" text=":" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="145.0" layoutY="56.0" prefHeight="239.0" prefWidth="223.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="102.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagers/icons8-user-male-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="67.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagers/icons8-checked-user-female-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblCustomers" alignment="CENTER" layoutX="8.0" layoutY="162.0" prefHeight="63.0" prefWidth="208.0" text="00" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="35.0" layoutY="14.0" prefHeight="63.0" prefWidth="154.0" text="Customers" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" height="30.0" radius="14.5" spread="0.29" width="30.0" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="483.0" layoutY="56.0" prefHeight="239.0" prefWidth="223.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="81.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagers/order.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="107.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagers/icons8-check-circle-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblOrders" alignment="CENTER" layoutX="8.0" layoutY="162.0" prefHeight="63.0" prefWidth="208.0" text="00" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="35.0" layoutY="14.0" prefHeight="63.0" prefWidth="154.0" text="Orders" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" height="30.0" radius="14.5" spread="0.29" width="30.0" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="822.0" layoutY="56.0" prefHeight="239.0" prefWidth="223.0" style="-fx-background-color: #fbf1f3; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="75.0" layoutX="80.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagers/icons8-supplier-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="98.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagers/icons8-check-circle-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblSuppliers" alignment="CENTER" layoutX="8.0" layoutY="162.0" prefHeight="63.0" prefWidth="208.0" text="00" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="35.0" layoutY="14.0" prefHeight="63.0" prefWidth="154.0" text="Suppliers" textFill="#e73e68">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" height="30.0" radius="14.5" spread="0.29" width="30.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

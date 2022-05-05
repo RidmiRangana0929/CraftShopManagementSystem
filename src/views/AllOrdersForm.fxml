@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="allOrdersContext" prefHeight="812.0" prefWidth="1194.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AllOrdersFormController">
+   <children>
+      <AnchorPane layoutX="60.0" layoutY="40.0" prefHeight="732.0" prefWidth="1074.0" style="-fx-background-color: #fbf1f3; -fx-border-radius: 10; -fx-background-radius: 10;">
+         <children>
+            <TableView fx:id="tblAllOrdersContext" layoutX="74.0" layoutY="37.0" prefHeight="659.0" prefWidth="926.0" style="-fx-background-color: #fbf1f3; -fx-border-color: #e73e68; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <columns>
+                  <TableColumn fx:id="colOrderId" prefWidth="190.0" text="Order Id" />
+                  <TableColumn fx:id="colTotal" prefWidth="298.0" text="Total" />
+                  <TableColumn fx:id="colDate" prefWidth="246.0" text="Date" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="189.0" text="Customer Id" />
+               </columns>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow color="#e73e68" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
